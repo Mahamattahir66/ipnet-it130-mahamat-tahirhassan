@@ -54,7 +54,57 @@
         </div>
     </fieldset>
 
-    <!-- LA SUITE DU FORMULAIRE SERA AJOUTÉE ICI -->
+        <!-- Groupe 2 : Votre message -->
+    <fieldset>
+        <legend>Votre message</legend>
+
+        <!-- Champ Sujet -->
+        <div>
+            <label for="sujet">Sujet <span aria-hidden="true">*</span> :</label>
+            <select id="sujet" name="sujet" required>
+                <option value="">-- Choisir un sujet --</option>
+                <option value="question">Question sur le cours</option>
+                <option value="projet">Proposition de projet</option>
+                <option value="stage">Demande de stage</option>
+                <option value="partenariat">Partenariat</option>
+                <option value="autre">Autre</option>
+            </select>
+        </div>
+
+        <!-- Champ Message -->
+        <div>
+            <label for="message">Message <span aria-hidden="true">*</span> :</label>
+            <textarea id="message" name="message"
+                      rows="6"
+                      placeholder="Écrivez votre message ici (minimum 10 caractères)..."
+                      required minlength="10" maxlength="1000"></textarea>
+        </div>
+    </fieldset>
+
+       <!-- Groupe 3 : Consentement -->
+    <fieldset>
+        <legend>Consentement</legend>
+
+        <div>
+            <input type="checkbox" id="rgpd" name="rgpd" required>
+            <label for="rgpd">
+                J'accepte que mes données soient utilisées pour me recontacter. <span aria-hidden="true">*</span>
+            </label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">
+                Je souhaite recevoir la newsletter (optionnel).
+            </label>
+        </div>
+    </fieldset>
+
+    <!-- Boutons -->
+    <div>
+        <button type="submit">Envoyer le message</button>
+        <button type="reset">Réinitialiser</button>
+    </div>
 
 </form>
         </section>
